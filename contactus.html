@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Maths Club</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo-and-name">
+                <img class="logo" src="assets/logo.png" alt="maths club logo" />
+                <div class="nav-name">
+                    <p class="logo-name-college">MPSTME</p>
+                    <h1 class="logo-name">Club Mathematica</h1>
+                </div>
+            </div>
+        </a>
+        <span id="toggle" class="material-icons">
+            menu
+        </span>
+        <ul class="nav-links">
+            <a href="index.html"><li class="link">
+                Home
+            </li></a>
+            <a href="sponsors.html">
+                <li class="link">Sponsors</li>
+            </a>
+            <a href="../EventPage/events.html">
+                <li class="link">Events</li>
+            </a>
+            <a href="aboutus.html">
+                <li class="link">About Us</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <section id="contactpage">
+            <div class="contact-box">
+                <header class="text-center">Contact Us</header>
+                <div class="container">
+                    <form class="form" action="contactform.php" method="POST">
+                        <div class="flex-container">
+                            <!-- <div class="flex-item"> -->
+                            <img src="/assets/maths-club-contact.svg" alt="" />
+                            <!-- </div> -->
+                            <div class="flex-item">
+                                <form action="contactform.php" method="post">
+                                <input type="text" name="name" id="" placeholder="Name" /><br />
+                                <input type="email" name="email" id="" placeholder="Email" /><br />
+                                <textarea name="descr" id="" placeholder="Description"></textarea><br />
+                                <button class="button">Submit</button>
+                            </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="map-mail-phone">
+                    <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9490427543674!2d72.83535271482248!3d19.109891287068503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b888ae67fd%3A0xe0b9538d623ac5d2!2sMukesh%20Patel%20School%20Of%20Technology%20Management%20%26%20Engineering!5e0!3m2!1sen!2sin!4v1639330700495!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div>
+                        <span>
+                            <span class="material-icons">
+                                mail
+                            </span>
+                            mpstmemathsclub@gmail.com
+                            <span id="copyCode" class="material-icons" onclick="copyCode('mpstmemathsclub@gmail.com')">
+                                content_copy
+                            </span>
+                        </span>
+                        <span>
+                            <span class="material-icons">
+                                call
+                            </span>
+                            +91 9699926603
+                            <span id="copyCode" class="material-icons" onclick="copyCode('9699926603')">
+                                content_copy
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-college">
+                <h1 class="footer-name">Club Mathematica</h1>
+                <img class="nmims-logo" src="assets/MPSTME_Logo_2_white2.png" alt="maths club logo" />
+                <div class="h-item college">
+                    <span id="location" class="material-icons">
+                        place
+                    </span>
+                    <div>
+                        Mukesh Patel School Of Technology Management & Engineering <br> Sahar Rd near Cooper Hospital,
+                        JVPD Scheme, Vile Parle West,<br> Mumbai, Maharashtra 400056
+                    </div>
+                </div>
+        </div>
+        <div class="footer-events">
+            <span class="quick-links">Events</span>
+            <ul>
+                <li>Numerate Minds</li>
+                <li>PI Day Webinar</li>
+            </ul>
+        </div>
+
+        <div class="footer-events">
+            <span class="quick-links">Links</span>
+            <ul>
+                <li><a href="EventPage/events.html">Events</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+
+</body>
+</html>
