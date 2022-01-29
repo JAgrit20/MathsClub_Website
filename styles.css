@@ -594,6 +594,9 @@ textarea{
   .map-mail-phone {
     flex-direction: column;
   }
+  .mentor{
+    margin: 0px 20px 20px 20px;
+  }
 }
 @media screen and (max-width: 750px) {
   .map-contact {
