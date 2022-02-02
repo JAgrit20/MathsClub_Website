@@ -1,3 +1,49 @@
+<?php
+
+define('DB_SERVER', 'sql205.epizy.com');
+define('DB_USERNAME', 'epiz_30578289');
+define('DB_PASSWORD', 'zCezzSEJdfp');
+define('DB_NAME', 'epiz_30578289_user_contact');
+
+// Try connecting to the Database
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+//Check the connection
+if($conn == false){
+dir('Error: Cannot connect');
+}
+else
+{
+  $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  $lengthOfString = strlen($actual_link);
+$lastCharPosition = $lengthOfString-1;
+$lastChar = $lastCharPosition;
+echo "yes it is Connected " ;
+
+
+$sql = "select * from events where id =$lastChar";
+$re = $conn->query($sql);
+
+// echo $re;
+$etime="";
+$edate="";
+$ename="";
+$desc="";
+foreach($re as $row) {
+    $etime =  $row['start_time'];
+    $desc =  $row['Description'];
+    $edate =  $row['date'];
+    $ename =  $row['name'];
+
+}
+
+$conn->close();
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,8 +95,8 @@
             <div class="circle"></div>
             <div class="circle"></div>
             </div> -->
-            <p class="event_name">Numerate Minds</p>
-            <p class="join_us">Join us for the event @ 9PM on 18-01-2020</p>
+            <p class="event_name"> <?php echo $ename ?></p>
+            <p class="join_us">Join us for the event @  <?php echo $etime ?> on <?php echo $date ?> </p>
             <form action="#register">
             <a href="#register" class="register_rounded">REGISTER</a>
             </form>
@@ -59,10 +105,7 @@
 
         <div class="event-child-2">
             <p class="event_desc">
-                A webinar was organised by Club Mathematica on the occasion of International Pi Day. It was held on 14th March 2021; virtually on Microsoft Teams Platform from 11:00 A.M. onwards. The topic for the webinar was “Mathematics for a Better World”.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, doloremque corporis error unde fugiat rerum! Facilis repudiandae cupiditate officia assumenda pariatur, praesentium mollitia voluptatem saepe nam exercitationem, fugit officiis alias.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti exercitationem odio molestias magnam illum voluptas nam aperiam impedit consequuntur quae aspernatur voluptates, ratione labore cum sed. Architecto, accusantium beatae!
-
+            <?php echo $desc ?> 
             </p>
         </div>
 
