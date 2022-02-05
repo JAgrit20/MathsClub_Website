@@ -589,7 +589,9 @@ textarea{
 .super-core-profile h2 {
   padding-top: 10px;
 }
-
+a:link{
+  text-decoration: none;
+}
 
 
 @media screen and (max-width: 780px) {
