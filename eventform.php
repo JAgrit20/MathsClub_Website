@@ -39,7 +39,7 @@ $eventid = $_POST["eventid"];
 
 }
 // | name | Email | descr
-$sql = "INSERT INTO event  (name,pronoun,phone_number,sapid,program,email,branch,year,eventid)
+$sql = "INSERT INTO event_registrations  (name,pronoun,phone_number,sapid,program,email,branch,year,eventid)
 VALUES ('$name','$pronoun','$phone_number','$sapid','$program','$email','$branch','$year','$eventid')";
 
 if ($conn->query($sql) === TRUE)

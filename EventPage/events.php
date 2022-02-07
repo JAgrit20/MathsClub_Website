@@ -21,8 +21,8 @@ else
 {
   $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   $lastChar = substr($actual_link, -1);
-  echo "lastChar" ;
-    echo $lastChar ;
+//   echo "lastChar" ;
+//     echo $lastChar ;
 
 
 
@@ -119,7 +119,7 @@ $conn->close();
         <div class="event-child-3" id="register">
 
             <p class="register_for_event">REGISTER FOR THE EVENT</p>
-            <form action="contactform.php" method="post"></form>
+            <form action="../eventform.php" method="post">
             <input type="text" name="name" class="text_field" placeholder="Name">
             <div class="event-child-3-by-2">
                 <select name="pronoun" class="pronoun">
@@ -132,9 +132,9 @@ $conn->close();
                 <input type="text" name="sapid" class="sap_field" placeholder="SAP-ID">
             </div>
             <div class="event-child-3-by-2">
-                <input type="program" name="program" class="program_field" placeholder="Program">
+                <input type="text" name="program" class="program_field" placeholder="Program">
                 <div class="event-child-3-by-2-by-2">
-                    <input type="program" name="branch" class="branch_field" placeholder="Branch">
+                    <input type="text"  name="branch" class="branch_field" placeholder="Branch">
                     <select name="year" class="year_field">
                         <option value="" disabled selected hidden>Year</option>
                         <option value="1">1st Year</option>
@@ -147,12 +147,13 @@ $conn->close();
             </div>
 
             <div class="event-child-3-by-2">
-                <input type="email" name="phone_number" class="phone_number" placeholder="Phone number" maxlength="10">
+                <input type="text"  name="phone_number" class="phone_number" placeholder="Phone number" maxlength="10">
                 <input type="email" name="email" class="email_field" placeholder="Email">
+                <input type="text" name="eventid" class="id" placeholder="id" value="<?php echo $lastChar ?>" hidden>
                        
             </div>
             <div class="event-child-4">
-                <button class="button">Submit</button>
+                <button class="button" type="submit">Submit</button>
             </div>
         </form>
         </div>
