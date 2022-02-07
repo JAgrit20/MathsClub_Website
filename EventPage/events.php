@@ -5,6 +5,11 @@ define('DB_USERNAME', 'epiz_30578289');
 define('DB_PASSWORD', 'zCezzSEJdfp');
 define('DB_NAME', 'epiz_30578289_user_contact');
 
+// define('DB_SERVER', 'localhost');
+// define('DB_USERNAME', 'root');
+// define('DB_PASSWORD', '1234');
+// define('DB_NAME', 'maths');
+
 // Try connecting to the Database
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
@@ -15,10 +20,11 @@ dir('Error: Cannot connect');
 else
 {
   $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  $lengthOfString = strlen($actual_link);
-$lastCharPosition = $lengthOfString-1;
-$lastChar = $lastCharPosition;
-echo "yes it is Connected " ;
+  $lastChar = substr($actual_link, -1);
+  echo "lastChar" ;
+    echo $lastChar ;
+
+
 
 
 $sql = "select * from events where id =$lastChar";
@@ -36,6 +42,7 @@ foreach($re as $row) {
     $ename =  $row['name'];
 
 }
+// echo $etime;
 
 $conn->close();
 
