@@ -42,10 +42,12 @@ VALUES ('$name','$email','$descr')";
 
 if ($conn->query($sql) === TRUE)
 {
+header("Location: https://hiddenmath.ga/");
 echo "New record created successfully\n";
 }
 else
 {
+header("Location: https://hiddenmath.ga/");
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
