@@ -515,6 +515,7 @@ textarea{
   width: 300px;
   height: 300px;
   border-radius: 10px;
+  margin:50px 0px 0px 0px;
 }
 
 .header-mentors {
@@ -588,11 +589,20 @@ textarea{
 .super-core-profile h2 {
   padding-top: 10px;
 }
+a:link{
+  text-decoration: none;
+}
 
 
 @media screen and (max-width: 780px) {
   .map-mail-phone {
     flex-direction: column;
+  }
+  .mentor{
+    margin: 0px 20px 20px 20px;
+  }
+  .club-img-logo{
+    margin:50px 0px 0px 0px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -674,4 +684,34 @@ footer {
   font-size: 25px;
   padding-right: 0.5rem;
   /* text-align: left; */
+}
+
+/*Sponsors Page*/
+
+.sponsorblock{
+  background-color: #E3F3FF;
+  border-radius: 15px;
+  margin: 15px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.sponsorblock img{
+  height: 150px;
+  width: 150px;
+  margin: 20px 20px;
+  filter:grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.sponsorblock img:hover{
+  filter:grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  transition: 0.5s;
 }
