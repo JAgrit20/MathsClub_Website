@@ -516,6 +516,7 @@ textarea{
   height: 300px;
   border-radius: 10px;
   margin:50px 0px 0px 0px;
+  object-fit: contain;
 }
 
 .header-mentors {
@@ -599,10 +600,13 @@ a:link{
     flex-direction: column;
   }
   .mentor{
-    margin: 0px 20px 20px 20px;
+    margin: 0px 15px 20px 20px;
   }
   .club-img-logo{
     margin:50px 0px 0px 0px;
+  }
+  .club-info{
+    text-align: center;
   }
 }
 @media screen and (max-width: 750px) {
@@ -718,7 +722,6 @@ footer {
 .sponsor{
   width: 33.75rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #fff;
   border-radius: 10px;
@@ -728,27 +731,34 @@ footer {
 .sponsors{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
 }
 .sponsor-name-quote {
-  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 10px 20px ;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
 }
 
 .sponsor-name-quote h2 {
   /* padding: 1rem 0; */
-  padding-bottom: 10px;
+  padding: 10px;
   color: #3899A7;
+
 }
 
 .sponsor img {
-  width: 40%;
-  height: 225px;
-  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
   object-fit: cover;
+
 }
 .sponsor-name-quote span {
   color: #50B3C0;
+  padding: 0px 10px;
   font-style: italic;
 }
 
@@ -760,9 +770,11 @@ footer {
     margin: 0px 30px 40px 20px;
   }
   .sponsor img {
-    width: 100%;
+    /* width: 100%; */
     margin: 0px 0px 20px 0px;
-    object-fit:cover;
+    /* object-fit: cover; */
+
+    
   }
 
   .sponsor-name-quote{
