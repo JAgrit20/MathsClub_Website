@@ -1,6 +1,8 @@
 const toggleButton = document.querySelector('#toggle')
 const navbarLinks = document.querySelector('.nav-links')
 const copied = document.querySelector('#copied');
+const t1 = document.querySelector('.t1');
+const t2 = document.querySelector('.t2');
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 })
@@ -21,4 +23,13 @@ function copyCode(code) {
   })
   /* Alert the copied text */
   // alert("Copied the text: " + code);
+}
+
+function details(num) {
+  if(num == 2) {
+    t2.classList.toggle('details-active')
+  }else{
+    t1.classList.toggle('details-active')
+
+  }
 }

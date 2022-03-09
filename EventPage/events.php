@@ -153,7 +153,9 @@ $conn->close();
                        
             </div>
             <div class="event-child-4">
+            <center>
                 <button class="button" type="submit">Submit</button>
+                </center>
             </div>
         </form>
         </div>

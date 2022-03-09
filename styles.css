@@ -78,7 +78,7 @@ nav, main {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     #toggle {
         display: flex;
     }
@@ -480,6 +480,13 @@ textarea{
       flex-direction: column;
     }
 }
+
+@media screen and (max-width: 420px) {
+  .google-map {
+    width: 80%;
+    height: 40%;
+  }
+}
 /* Contact Form End */
 
 /* About Us Start */
@@ -507,6 +514,8 @@ textarea{
   margin: 3rem 0;
 }
 
+
+
 .club-info {
   width: 70%;
 }
@@ -516,6 +525,7 @@ textarea{
   height: 300px;
   border-radius: 10px;
   margin:50px 0px 0px 0px;
+  object-fit: contain;
 }
 
 .header-mentors {
@@ -534,13 +544,18 @@ textarea{
 
 .mentor {
   width: 33.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-height: auto;
+  display: block;
+  position: relative;
   background-color: #fff;
   border-radius: 10px;
   margin: 1rem 0;
   box-shadow: 8.5px 8.5px 17px #D9EAED;
+}
+.mentor_details {
+  display: flex ;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mentor img {
@@ -548,6 +563,38 @@ textarea{
   height: 175px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.details {
+  display: none;
+  padding: 1rem 3rem;
+  text-align: center;
+}
+
+#arrow {
+  position: absolute;
+  font-size: 3rem;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.details-active {
+  animation: expand 0.3s ease;
+  display: block;
+}
+
+@keyframes expand {
+  from {
+    /* height: 0; */
+    /* transform: translateY(-50px); */
+    opacity: 0;
+  }
+  to {
+    /* height: 100%; */
+    /* transform: translate(0); */
+    opacity: 1;
+  }
 }
 
 .mentor-name-quote {
@@ -599,16 +646,23 @@ a:link{
     flex-direction: column;
   }
   .mentor{
-    margin: 0px 20px 20px 20px;
+    margin: 0px 15px 20px 20px;
   }
   .club-img-logo{
     margin:50px 0px 0px 0px;
+  }
+  .club-info{
+    text-align: center;
   }
 }
 @media screen and (max-width: 750px) {
   .map-contact {
     justify-content: center;
     align-items: center;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
   }
 }
 /* About Us End */
@@ -618,15 +672,15 @@ footer {
   display: flex;
   justify-content: space-between;
   /* padding: 2rem 5rem; */
-  padding: 16px 60px;
+  padding: 16px 4rem;
   margin-top: 2rem;
   flex-wrap: wrap;
   background-color: #262536;
   color: white;
 }
 .nmims-logo {
-  width: 350px;
-  height: 60px;
+  width: 200px;
+  height: 30px;
   /* background-color: white; */
   box-sizing: content-box;
   /* padding: 1rem; */
@@ -714,4 +768,88 @@ footer {
   filter:grayscale(0%);
   -webkit-filter: grayscale(0%);
   transition: 0.5s;
+}
+.sponsor{
+  width: 33.75rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 8.5px 8.5px 17px #D9EAED;
+}
+.sponsors{
+  display: flex;
+  /* width: 60%; */
+  justify-content: space-around;
+  align-items: center; 
+  flex-wrap: wrap;
+}
+.sponsor-name-quote {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 10px 20px ;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+}
+
+.sponsor-name-quote h2 {
+  /* padding: 1rem 0; */
+  padding: 10px;
+  color: #3899A7;
+
+}
+
+.sponsor img {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+
+}
+.sponsor-name-quote span {
+  color: #50B3C0;
+  padding: 0px 10px;
+  font-style: italic;
+}
+
+#plus-sponsor {
+  color: #3899A7;
+  font-size: 7.5rem;
+  /* margin-left: -10rem; */
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  
+  .sponsor{
+    flex-direction: column;
+    text-align: center;
+    margin: 0px 30px 40px 20px;
+  }
+  .sponsor img {
+    /* width: 100%; */
+    margin: 0px 0px 20px 0px;
+    /* object-fit: cover; */
+
+    
+  }
+
+  .sponsor-name-quote{
+    padding: 0px 20px 30px 20px;
+  }
+  
+}
+
+.img-round-border{
+  border-radius: 50px;
 }

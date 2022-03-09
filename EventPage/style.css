@@ -172,6 +172,10 @@ body {
     padding : 10px 20px;
     align-items: center;
 }
+.event-child-4{
+    display: flex;
+    align-content: center;
+}
 .circle {
     background: #77CFDC;
     box-shadow: 0px 4px 11px 3px rgba(0, 0, 0, 0.25);
